@@ -1,25 +1,27 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your name?");
-            string firstName = Console.ReadLine();
+            List<char> board = new List<char>{'1', '2', '3'};
+            
+            //Display baord 
+            DisplayBoard(board);
 
-            Console.Write("What is your last name? ");
-            string lastName = Console.ReadLine();
+            //Get input
 
-            Console.WriteLine("My name is " + lastName + "," + firstName + " " + lastName); 
+            //
 
-            int max = int.MaxValue;
-            int min = int.MinValue;
-
-            Console.WriteLine($"Max value" + max);
-
-
+            board[0] = 'x';
+            DisplayBoard(board);
         }
     }
+}
+
+static void DisplayBoard(List<char> board)
+{
+    Console.WriteLine(board[0] + "|" + board[2]);
 }
